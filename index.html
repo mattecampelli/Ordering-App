@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Joe's Diner</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smythe&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js" type="module" defer></script>
+    </head>
+    <body>
+        <section>
+            <div class="hero">
+                <h1>Joe's Diner</h1>
+                <h2>Il miglior cibo della città</h2>
+            </div>
+        </section>
+        <section>
+            <div class="selection" id="selection">
+                <h1>Ordina il tuo pasto!</h1>
+                <div class="dropdown">
+                    <button type="button" id="dropdown-toggle" >Scegli i piatti ▾</button>
+                    <div class="dropdown-list hidden" id="dropdown-list">
+                        <label><input type="checkbox" value="pizza"> Pizza</label>
+                        <label><input type="checkbox" value="hamburger"> Hamburger</label>
+                        <label><input type="checkbox" value="pasta"> Pasta</label>
+                        <label><input type="checkbox" value="beer"> Birra</label>
+                        <label><input type="checkbox" value="water"> Acqua</label>
+                    </div>
+                </div>
+                <button type="button" id="add-to-order" class="submit-btn">Aggiungi al carrello</button>
+            </div>
+        </section>
+        <section>
+            <div class="rendered-items" id="rendered-items">
+            </div>
+        </section>
+        <section>
+            <div class="order-summary" id="order-summary">
+                <h1>Riepilogo Ordine</h1>
+                <div class="order-items" id="order-items">
+                </div>
+                <div class="total-price" id="total-price">
+                    <p>Totale: </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="payment-modal hidden" id="payment-modal">
+            <div class="payment-form-container">
+                <h2>Completa il tuo ordine</h2>
+                <form id="payment-form">
+                    <label for="customer-name">Nome</label>
+                    <input type="text" id="customer-name" name="name" placeholder="Il tuo nome" required>
+
+                    <label for="customer-address">Indirizzo</label>
+                    <input type="text" id="customer-address" name="address" placeholder="Il tuo indirizzo" required>
+
+                    <button type="submit" class="send-food-btn">Invia il mio ordine</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
